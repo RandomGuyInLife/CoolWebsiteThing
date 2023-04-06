@@ -10,13 +10,20 @@
 
 <body>
   <script>
-    var body = document.getElementsById("main");
-    var e = "<div id=\"invis\">_" + body.innerHTML + "_</div>";
-    body.innerHTML = e;
-    function somethin() {
-      body.innerHTML = e.split("_")[1];
-      document.getElementById("temp").innerHTML = "";
-    }
+    $(document).ready(function() {
+      // Do your event binding in JavaScript, not as inline HTML event attributes:
+      $("#start").on("click", somethin);
+
+      // Now the event handler reference and the function are in the same scope
+      var body = document.getElementsById("main");
+      var e = "<div id=\"invis\">_" + body.innerHTML + "_</div>";
+      body.innerHTML = e;
+      function somethin() {
+        body.innerHTML = e.split("_")[1];
+        document.getElementById("temp").innerHTML = "";
+      }
+    });
+  
     </script>
   <noscript>Sorry, your browser does not support JavaScript!</noscript>
   <div id="temp">test
