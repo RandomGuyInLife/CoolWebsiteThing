@@ -11,17 +11,17 @@
 <body>
   <script>
     $(document).ready(function() {
-      var ebody = document.querySelector("#main");
-      var e = "<div id=\"invis\">_" + ebody.innerHTML + "_</div>";
-      ebody.innerHTML = e;
+      var ebody = document.getElementById("main");
+      var e = "<div id=\"invis\">_" + ebody.innerText + "_</div>";
+      ebody.innerText = e;
       // Do your event binding in JavaScript, not as inline HTML event attributes:
       $("#start").on("click", somethin);
 
       // Now the event handler reference and the function are in the same scope
       function somethin() {
-        var body = document.querySelector("#main");
-        body.innerHTML = body.innerHTML.split("_")[1];
-        document.querySelector("#temp").innerHTML = "";
+        var body = document.getElementById("main");
+        body.innerText = body.innerText.split("_")[1];
+        document.getElementById("temp").innerText = "";
       }
     });
     </script>
