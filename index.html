@@ -9,7 +9,15 @@
 </head>
 
 <body>
-  <script type="JavaScript" src="main.js"></script>
+  <script type="JavaScript">
+    var body = document.getElementsById("main");
+    var e = "<div id=\"invis\">_" + body.innerHTML + "_</div>";
+    body.innerHTML = e;
+    function somethin() {
+      body.innerHTML = e.split("_")[1];
+      document.getElementById("temp").innerHTML = "";
+    }
+    </script>
   <noscript>Sorry, your browser does not support JavaScript!</noscript>
   <div id="temp">test
   Hi. This website is a work in proggrest and I would appreciate if you could wubmit ideas <a href="https://docs.google.com/forms/d/e/1FAIpQLScTzw-G6-45gjl9YghlbxGihFEmTlBvZpE4sc9hJc93XHaKxg/viewform?usp=sf_link">here</a> or continue to that current games <button id="start" onclick="somethin();">here</button>.</div>
