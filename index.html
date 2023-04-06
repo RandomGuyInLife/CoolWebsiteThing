@@ -11,7 +11,7 @@
 <body>
   <script>
     $(document).ready(function() {
-      var ebody = document.getElementsById("main");
+      var ebody = document.querySelector("#main");
       var e = "<div id=\"invis\">_" + ebody.innerHTML + "_</div>";
       ebody.innerHTML = e;
       // Do your event binding in JavaScript, not as inline HTML event attributes:
@@ -19,9 +19,9 @@
 
       // Now the event handler reference and the function are in the same scope
       function somethin() {
-        var body = document.getElementsById("main");
+        var body = document.querySelector("#main");
         body.innerHTML = body.innerHTML.split("_")[1];
-        document.getElementById("temp").innerHTML = "";
+        document.querySelector("#temp").innerHTML = "";
       }
     });
     </script>
