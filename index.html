@@ -11,23 +11,10 @@
 <body>
   <script>
     $(document).ready(function() {
-      var ebody = document.getElementById("main");
-      var e = "<div id=\"invis\">_" + ebody.innerText + "_</div>";
-      ebody.innerText = e;
-      // Do your event binding in JavaScript, not as inline HTML event attributes:
-      $("#start").on("click", somethin);
-
-      // Now the event handler reference and the function are in the same scope
-      function somethin() {
-        var body = document.getElementById("main");
-        body.innerText = body.innerText.split("_")[1];
-        document.getElementById("temp").innerText = "";
-      }
+      alert("This website is a work in proggrest and I would appreciate if you could wubmit ideas <a href=\"https://docs.google.com/forms/d/e/1FAIpQLScTzw-G6-45gjl9YghlbxGihFEmTlBvZpE4sc9hJc93XHaKxg/viewform?usp=sf_link\">here</a>")
     });
     </script>
   <noscript>Sorry, your browser does not support JavaScript!</noscript>
-  <div id="temp">test
-  Hi. This website is a work in proggrest and I would appreciate if you could wubmit ideas <a href="https://docs.google.com/forms/d/e/1FAIpQLScTzw-G6-45gjl9YghlbxGihFEmTlBvZpE4sc9hJc93XHaKxg/viewform?usp=sf_link">here</a> or continue to that current games <button id="start" onclick="somethin();">here</button>.</div>
   <div id="main">
     Hi bodys wienoqiwej
   </div>
