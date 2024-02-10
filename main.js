@@ -5,6 +5,7 @@ const head = document.body.appendChild(document.createElement("div"));
 head.id = "head";
 head.style.height = "%100";
 head.style.width = "%100";
+head.textContent = "hihihi";
 
 
 window.onscroll = function() {scrollFunction()};
