@@ -1,19 +1,25 @@
-
-document.getElementsByTagName("footer")[0].style.bottom = 0;
-
 const head = document.body.appendChild(document.createElement("div"));
 head.id = "head";
-head.style.height = "%100";
-head.style.width = "%100";
-head.textContent = "hihihi";
+head.style.height = screen.height + "px";
+const img = head.appendChild(document.createElement("img"));
+img.src = "AAF7eCm4sbw_sWriQm_1707515503330.png";
+img.style.height = "200px";
+
+const test = async () => {
+  for (i = 0; i < 100;) {
+  setTimeout(() => {
+      head.style.top = i + "px";
+      i++;
+      head.textContent = head.style.top + "q2e2qe21e12e12e12e21e12e12e12ee1212";
+    
+  }, 5000);}
+}
+test();
 
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    head.style.height = "%"+ (100-(window.screenY-50));
-  } else {
-    document.getElementById("header").style.fontSize = "90px";
-  }
+  
+  head.style.height = screen.height - window.scrollY + "px";
 }

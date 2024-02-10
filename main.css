@@ -1,3 +1,4 @@
 div#head {
-  background-color: rgb(5, 158, 51);
+  background: rgb(5, 158, 51);
+  background-size: cover;
 }
